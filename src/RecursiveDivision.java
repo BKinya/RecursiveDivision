@@ -20,10 +20,10 @@ public class RecursiveDivision {
 
         dividend -= divisor;
         if (dividend == 0) {
-            ++quotient;
+            ++quotient; //quotient is one if result after subtracting is 0
             System.out.println(quotient);
         } else {
-
+                // quotient+1 by one to point to one pass
             division(dividend, quotient + 1);
 
         }
