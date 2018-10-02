@@ -1,4 +1,4 @@
-public class FibboSeries {
+public class RecursiveDivision {
 
     static int a = 0;
     static int b = 1;
