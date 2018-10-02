@@ -23,7 +23,7 @@ public class RecursiveDivision {
             ++quotient; //quotient is one if result after subtracting is 0
             System.out.println(quotient);
         } else {
-                // quotient+1 by one to point to one pass
+                // quotient+1  to point to one pass
             division(dividend, quotient + 1);
 
         }
