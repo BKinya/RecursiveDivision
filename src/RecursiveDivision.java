@@ -3,29 +3,34 @@ public class RecursiveDivision {
     static int a = 0;
     static int b = 1;
     static int c = 0;
+    static int  quotient = 0;
 
     public static void main(String[] args) {
-        division(49, 0);
+
+        System.out.println(division(49, 7));
 
     }
 
     /**
      * Division using recursive subtraction
      * @param dividend
-     * @param quotient
+     * @param divisor
      */
 
-    public static void division(int dividend, int quotient) {
-        int divisor= 7;
+    public static int division(int dividend, int divisor) {
+
 
         dividend -= divisor;
+
         if (dividend == 0) {
             ++quotient; //quotient is one if result after subtracting is 0
-            System.out.println(quotient);
+            return quotient;
         } else {
-                // quotient+1  to point to one pass
-            division(dividend, quotient + 1);
+            division(dividend, divisor);
+            quotient = quotient + 1;
 
         }
+
+        return  quotient;
     }
 }
